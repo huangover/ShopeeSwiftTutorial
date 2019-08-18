@@ -13,6 +13,8 @@
 		D36BA03323092F4900EBBF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36BA03223092F4900EBBF60 /* Assets.xcassets */; };
 		D36BA03623092F4900EBBF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36BA03423092F4900EBBF60 /* LaunchScreen.storyboard */; };
 		D36BA04123092F4900EBBF60 /* ShopeeSwiftTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BA04023092F4900EBBF60 /* ShopeeSwiftTutorialTests.swift */; };
+		D36BA04C23093A3300EBBF60 /* AmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BA04B23093A3300EBBF60 /* AmountTableViewCell.swift */; };
+		D36BA04E23093A6500EBBF60 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BA04D23093A6500EBBF60 /* ChannelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D36BA03C23092F4900EBBF60 /* ShopeeSwiftTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopeeSwiftTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36BA04023092F4900EBBF60 /* ShopeeSwiftTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopeeSwiftTutorialTests.swift; sourceTree = "<group>"; };
 		D36BA04223092F4900EBBF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36BA04B23093A3300EBBF60 /* AmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountTableViewCell.swift; sourceTree = "<group>"; };
+		D36BA04D23093A6500EBBF60 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				D36BA02B23092F4800EBBF60 /* AppDelegate.swift */,
 				D36BA02D23092F4800EBBF60 /* ViewController.swift */,
+				D36BA04B23093A3300EBBF60 /* AmountTableViewCell.swift */,
+				D36BA04D23093A6500EBBF60 /* ChannelTableViewCell.swift */,
 				D36BA02F23092F4800EBBF60 /* Main.storyboard */,
 				D36BA03223092F4900EBBF60 /* Assets.xcassets */,
 				D36BA03423092F4900EBBF60 /* LaunchScreen.storyboard */,
@@ -198,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36BA02E23092F4800EBBF60 /* ViewController.swift in Sources */,
+				D36BA04E23093A6500EBBF60 /* ChannelTableViewCell.swift in Sources */,
+				D36BA04C23093A3300EBBF60 /* AmountTableViewCell.swift in Sources */,
 				D36BA02C23092F4800EBBF60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

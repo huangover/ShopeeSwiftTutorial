@@ -71,7 +71,27 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch sections[indexPath.section] {
+            
+        case .AmountSection(let rows):
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(AmountTableViewCell.self)", for: indexPath) as? AmountTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.textLabel?.text = rows[indexPath.row].title()
+            cell.delegate = self;
+            
+            return cell
+        case .ChannelSection(let rows):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ChannelTableViewCell.self)", for: indexPath) as? ChannelTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.textLabel?.text = rows[indexPath.row].title()
+            
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,6 +108,12 @@ extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count;
+    }
+}
+
+extension ViewController: AmountTableViewCellDelegate {
+    func didEnterTopUpAmount(amount: String, cell: AmountTableViewCell) {
+        
     }
 }
 
