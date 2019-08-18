@@ -8,8 +8,47 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+enum TableRow {
+    case AmountRow
+    case ChannelRow
+    
+    func title() -> String {
+        switch self {
+        case .AmountRow:
+            return "请输入金额"
+        case .ChannelRow:
+            return "请选择充值渠道"
+        }
+    }
+}
 
+enum TableSection {
+    case AmountSection(rows: [TableRow])
+    case ChannelSection(rows: [TableRow])
+    
+    func title() -> String {
+        switch self {
+        case .AmountSection:
+            return "充值金额"
+        case .ChannelSection:
+            return "充值渠道"
+        }
+    }
+    
+//    func rows() -> [TableRow] {
+//        switch self {
+//        case .AmountSection(let rows):
+//            return rows
+//        case .ChannelSection(let rows):
+//            return rows
+//        }
+//    }
+}
+
+class ViewController: UIViewController {
+    let sections: [TableSection] = [.AmountSection(rows: [.AmountRow]),
+                                    .ChannelSection(rows: [.ChannelRow])]
+    
     let tableView: UITableView
     
     init() {
@@ -36,7 +75,19 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        
+        switch sections[section] {
+        case .AmountSection(let rows):
+            return rows.count
+        case .ChannelSection(let rows):
+            return rows.count
+        }
+        
+//        return sections[section].rows().count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count;
     }
 }
 
