@@ -49,19 +49,7 @@ class ViewController: UIViewController {
     let sections: [TableSection] = [.AmountSection(rows: [.AmountRow]),
                                     .ChannelSection(rows: [.ChannelRow])]
     
-    let tableView: UITableView
-    
-    init() {
-        tableView = UITableView();
-        
-        super.init(nibName: nil, bundle: nil)
-        
-        tableView.dataSource = self;
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    let tableView: UITableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +101,12 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: AmountTableViewCellDelegate {
     func didEnterTopUpAmount(amount: String, cell: AmountTableViewCell) {
+        
+    }
+}
+
+extension ViewController {
+    func foo() {
         
     }
 }
